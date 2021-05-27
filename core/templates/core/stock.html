@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+     <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap-social/bootstrap-social.css' %}">
+     <link href="{% static 'css/styles.css'%}" rel="stylesheet">
+    <title>Stock</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+           <a class="navbar-brand" href="{% url 'home'%}">Bifrost Bridge</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                        <div class="collapse navbar-collapse" id="Navbar">
+                            <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="{%url 'home' %}"><span class="fa fa-home fa-lg"> Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutus' %}"><span class="fa fa-info fa-lg"> About</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contactus' %}"><span class="fa fa-address-card fa-lg"> Contact</span></a></li>
+                                                                   <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{%url 'stock' %}">Stocks</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{%url 'sports' %}">Sports</a>
+             <a class="dropdown-item" href="{%url 'weather' %}">Weather</a>
+             <a class="dropdown-item" href="{%url 'songs' %}">Song Lyrics</a>
+        </div>
+      </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="jumbotron row-header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 text-center">
+                    <h1>Bifrost Bridge</h1>
+                    <p>The Bifrost Bridge, commonly referred as Bifrost, is a dimensional gateway which allows instantaneous travel within the 4 main realms i.e. Stocks, Sports, Weather, Song Lyrics. Whenever it is used, it leaves a history-like marking.</p>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container ">
+        <div class="row  row-content justify-content-center" >
+        <div class="col-sm-6 order-sm-last ">
+            <div class="media">
+                                <div>
+                    <a href="{% url 'scrapingCurrencies' %}" ><img class="d-flex mr-3 img-thumbnail align-self-center rounded"
+                                                                    src="{% static 'img/currency.jpg' %}" alt="Book" height="450" width="450"></a></div>
+            </div>
+            </div>
+                    <div class="col-sm-6">
+                    <div class="media-body">
+                        <h2 class="mt-0">Currencies</h2>
+
+
+                    </div>
+                </div>
+
+
+        </div>
+
+
+        <div class="row  row-content justify-content-center" >
+        <div class="col-sm-6 order-sm-last ">
+            <a class="media">
+                                <div>
+                    <a href="{%url 'worldIndices'%}" ><img class="d-flex mr-3 img-thumbnail align-self-center rounded"
+                                                      src="{% static 'img/indices.jpg' %}" alt="Movie" height="450" width="450"></a></div>
+            </a>
+            </div>
+                    <div class="col-sm-6 ">
+                    <div class="media-body">
+                        <h2 class="mt-0">World Indices</h2>
+
+                    </div>
+                </div>
+
+
+        </div>
+        <div class="row  row-content justify-content-center" >
+        <div class="col-sm-6 order-sm-last ">
+            <a class="media">
+                                <div>
+                    <a href="{% url 'commodities' %}" ><img class="d-flex mr-3 img-thumbnail align-self-center rounded"
+                                                      src="{% static 'img/commodity.jpg' %}" alt="Weather" height="450" width="450"></a></div>
+            </a>
+            </div>
+                    <div class="col-sm-6 ">
+                    <div class="media-body">
+                        <h2 class="mt-0">Commodities</h2>
+
+                    </div>
+                </div>
+
+
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-sm-3 align-items-center">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a  href="{% url 'home'%}">Home</a></li>
+                        <li><a  href="{% url 'aboutus'%}">About</a></li>
+                        <li><a href="{% url 'contactus' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-offset-1 col-sm-6 align-items-center" >
+                    <h5>Our Address</h5>
+                    <address>
+		              Guru Nanak Dev Engineering college<br>
+		              Gill Road, Ludhiana<br>
+		              INDIA<br>
+		              <i class="fa fa-phone fa-lg"></i>:+91 9530747064<br>
+		              <i class="fa fa-fax fa-lg"></i>: +91 8377092213<br>
+		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:ysanjeet282@gmail.com">ysanjeet282@gmail.com</a>
+		           </address>
+                </div>
+                <div class="col-3 col-sm-3 align-self-center">
+                    <div class="text-center">
+                       <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="container">
+                <div class=" row justify-content-center">
+                    <p>© Copyright 2020 Bifrost Bridge</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+ <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="{% static 'node_modules/jquery/dist/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'node_modules/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+</body>
+
+</html>
